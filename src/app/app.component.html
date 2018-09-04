@@ -1,0 +1,52 @@
+<div class="conteneur">
+<!-- <div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+           <div class="input-group searchGrp pull-right">
+        <input type="text" [(ngModel)]="filtertext" class="form-control" placeholder="Rechercher par nom du produit...">
+        </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div> -->
+
+<!-- Header -->
+<img src="assets/imgs/slide_maison.jpg">
+<mat-toolbar color="primary" align="center">
+  <h1>Comparateur de prix</h1>
+</mat-toolbar>
+<!-- Header -->
+<!-- Expansion panel -->
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title align="center">
+        Recherche & Filtres
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+ 
+      <input matInput placeholder="Rechercher par nom du produit"  [(ngModel)]="filtertext  " >
+  
+  </mat-expansion-panel> 
+</mat-accordion>
+<!-- Expansion panel -->
+.
+  <!--  -->
+
+  <div class="row " >
+    <div class="col-md-3  myard" *ngFor="let anonce of annonces | filter: filtertext " >
+      <div class="card" style="width: 18rem;" >
+          <a href="{{anonce.urlProduct }}"><img class="card-img-top" src="{{anonce.imgProduct}}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{anonce.libProduct | slice:0:15 | uppercase}}</h5>
+            <p class="card-text">{{anonce.descProduct | slice:0:30}}...</p>
+            <a href="#" class="badge badge-primary">{{anonce.priceProduct }}</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

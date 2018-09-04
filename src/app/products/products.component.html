@@ -1,0 +1,13 @@
+  <div class="row " >
+    <div class="col-md-3  myard" *ngFor="let anonce of annonces | filter: filtertext " >
+      <div class="card" style="width: 18rem;" >
+          <a href="{{anonce.urlProduct }}"><img class="card-img-top" src="{{anonce.imgProduct}}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">{{anonce.libProduct | slice:0:15 | uppercase}}</h5>
+            <p class="card-text">{{anonce.descProduct | slice:0:30}}...</p>
+            <a href="#" class="badge badge-primary">{{anonce.priceProduct }}</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+/* .carde{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+img {
+    width:200px;
+    height: 200px;
+} */
+ 
+.conteneur{
+	margin: 10px 70px 0px 70px;
+}
+.product.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
